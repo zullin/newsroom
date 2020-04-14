@@ -2,7 +2,7 @@
 <meta property = 'og:locale' content = 'en_US' />
 <meta property = 'og:type' content = 'article' />
 <meta property = 'og:title' content = '{{ .Title }}' />
-<meta property = 'og:description' content = '{{ with .Summary}}{{ . | truncate 150 }}{{ else }}{{ .Site.Params.description }}{{ end }}'>
+<meta property = 'og:description' content = '{{ with .Summary}}{{ . | truncate 250 }}{{ else }}{{ .Site.Params.description }}{{ end }}'>
 <meta property = 'og:url' content = '{{ .Permalink }}' />
 {{- with .Params.image }}
 <meta property = 'og:image' content = '{{ absURL (printf "images/%s" .) }}'/>
@@ -19,7 +19,7 @@
       "mainEntityOfPage":"{{ .Permalink }}",
       "name": "{{ .Site.Title }}",
       "headline": "{{ .Title  }}",
-      "description": "{{ htmlUnescape (.Summary | truncate 150) }}",
+      "description": "{{ htmlUnescape (.Summary | truncate 250) }}",
       "url": "{{ .Permalink }}",
       "datePublished": "{{ $date }}",
       "dateModified": "{{ $date }}",
