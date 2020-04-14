@@ -10,6 +10,12 @@
           <img src = '{{ absURL (printf "images/%s" .) }}' alt = '{{ . }}' class = 'post_thumbnail'>
         {{ end }}
           {{ .Content }}
+
+          <p>
+            <audio class="player" controls  preload="none">
+              <source src="{{ .Permalink}}/{{ .Params.audio }}" type="audio/mp3">
+            </audio>
+          </p>
         </div>
         <div class ='post_extra mb-2'>
           {{ partial "share.html" . }}
