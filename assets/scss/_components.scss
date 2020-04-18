@@ -33,6 +33,12 @@
         left: -2rem;
       }
     }
+    .hide-cover-image {
+      display: none;
+    }
+    p:empty {
+      display: none;
+    }
   }
   &_thumb{
     display: grid;

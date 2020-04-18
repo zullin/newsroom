@@ -57,6 +57,12 @@
         padding-top: 0;
       } 
     }
+    .hide-cover-image {
+      display: none;
+    }
+    p:empty {
+      display: none;
+    }
   }
   .icon {
     margin-top: 0;
