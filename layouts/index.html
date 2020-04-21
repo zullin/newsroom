@@ -28,5 +28,5 @@
   {{- if and (eq $index (add $size -1)) (gt $size 1) }}</div>{{ end }}
   {{- end }}
 </div>
-<a href = '{{ absURL (printf "episode/%s" "") }}' class = 'post_nav'><span class = 'post_next'>Все эпизоды</span></a>
+<a href = '{{ absURL (printf "episodes/%s" "") }}' class = 'post_nav'><span class = 'post_next'>Все эпизоды</span></a>
 {{ end }}
