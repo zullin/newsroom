@@ -10,10 +10,9 @@
       {{ $scratch.Set "image" "thumbnail.svg" }}
     {{ end }}
     {{ $image := $scratch.Get "image" }}
-    {{ $bg := (absURL (printf "images/%s" $image)) }}
   <article class = 'article mb-2'>
     <a href = '{{ $value.Permalink }}' {{ if eq $index 0 }} class = 'grid-reverse' {{ end }}>
-      <div class = 'article_thumb' style='background-image: url({{ $bg }})'></div>
+      <div class = 'article_thumb' style='background-image: url({{ $image }})'></div>
       <div class = 'article_meta {{ if eq $index 0 }} center_y {{ end }}'>
         <time class = 'pale' datetime='{{ $value.Date.Format "02 January 2006" | safeHTML }}'>
           {{ $value.Date.Day }} {{ index $.Site.Data.months (printf "%d" $value.Date.Month) }}
