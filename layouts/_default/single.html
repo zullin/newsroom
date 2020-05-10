@@ -16,7 +16,7 @@
 
           <p>
             <audio class="player" controls  preload="none">
-              <source src="{{ .Params.audio }}" type="audio/mp3">
+              <source src="{{ $.Site.Params.storageURL }}/{{ .Params.number }}.mp3" type="audio/mp3">
             </audio>
           </p>
         </div>
