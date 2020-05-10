@@ -15,7 +15,7 @@
           {{ .Content }}
 
           <p>
-            <audio class="player" controls  preload="none">
+            <audio class="player" controls crossorigin="anonymous" preload="none">
               <source src="{{ $.Site.Params.storageURL }}/{{ .Params.number }}.mp3" type="audio/mp3">
             </audio>
           </p>
